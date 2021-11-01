@@ -14,6 +14,8 @@ export default class App extends Component {
       1 多次调用，如何处理？
         setState({}):合并更新一次状态，只调用一次 render() 更新界面 ---状态更新和界面更新都合并了
         setState(fn):更新多次状态，但只调用一次 render() 更新界面 ---状态更新没有合并，但界面更新合并了
+      2 如何得到异步更新后的状态数据？
+          在 setState()的 callback 回调函数中
   */
   state = { count: 0 }
 
