@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 
+      容器组件：通过 connect 包装 UI 组件产生的组件
+      connect():高阶组件
+      connect():返回的函数是一个高阶组件：接收一个 UI 组件，生成一个容器组件
+      容器组件的责任：向 UI 组件传入特定的属性
+      
+      // mapStateToProps    mapDispatchToProps(可以是个对象)
+      connect((state)=>{return{}},(dispatch)=>{return{}})(Count)
+    */
+
+      /* 
+     redux 相关 API
+       redux 中包含：createStore()创建一个 store 对象、applyMiddleware() 中间件异步用的、combineReducers()合并多个 reducer 函数
+       store 对象：getState(),dispatch(),subscribe()
+       react-redux:
+         <Provider store={store}> : 向所有的容器组件提供 store
+         </Provider>
+
+         connect()()
+        一般属性值从 state 中获取，函数属性内部会执行 dispatch 分发 action
+    */
+
+      /* 
+      redux 核心概念（3个）
+        action：
+           默认是一个对象（同步 action），{type:xxx,data:value},需要通过对应的 actionCreator 产生
+           他的值也可以是函数(异步 action)，需要引入 redux-thunk 才可以
+
+        reducer
+           根据老的 state 和指定的 action，返回一个新的 state
+           不能修改老的 state
+
+        store
+           redux 最核心的管理对象
+           内部管理着 state 和 reducer
+           提供方法：getState(),dispatch(action),subscribe(()=>{})
+    */
+    </script>
+  </body>
+</html>
